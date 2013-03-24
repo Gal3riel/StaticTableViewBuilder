@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C01C81BA16F9E8E8003E6B91 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C01C81B916F9E8E8003E6B91 /* SettingsViewController.m */; };
+		C01C81BC16FAE6EB003E6B91 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01C81BB16FAE6EB003E6B91 /* QuartzCore.framework */; };
 		C03562F016F9D98E00AF80A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C03562EF16F9D98E00AF80A1 /* UIKit.framework */; };
 		C03562F216F9D98E00AF80A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C03562F116F9D98E00AF80A1 /* Foundation.framework */; };
 		C03562F416F9D98E00AF80A1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C03562F316F9D98E00AF80A1 /* CoreGraphics.framework */; };
@@ -16,9 +18,15 @@
 		C035630216F9D98E00AF80A1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C035630116F9D98E00AF80A1 /* Default.png */; };
 		C035630416F9D98F00AF80A1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C035630316F9D98F00AF80A1 /* Default@2x.png */; };
 		C035630616F9D98F00AF80A1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C035630516F9D98F00AF80A1 /* Default-568h@2x.png */; };
+		C035630F16F9D9F900AF80A1 /* STableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C035630E16F9D9F900AF80A1 /* STableViewController.m */; };
+		C0E89E8916FEEB9E004415B6 /* SSingleSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E89E8816FEEB9E004415B6 /* SSingleSelectionViewController.m */; };
+		C0E89E8C16FF50B7004415B6 /* SReorderableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E89E8B16FF50B7004415B6 /* SReorderableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C01C81B816F9E8E8003E6B91 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		C01C81B916F9E8E8003E6B91 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		C01C81BB16FAE6EB003E6B91 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C03562EC16F9D98E00AF80A1 /* StaticTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StaticTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C03562EF16F9D98E00AF80A1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C03562F116F9D98E00AF80A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -32,6 +40,12 @@
 		C035630116F9D98E00AF80A1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		C035630316F9D98F00AF80A1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		C035630516F9D98F00AF80A1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C035630D16F9D9F900AF80A1 /* STableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STableViewController.h; path = StaticTableViewBuilder/STableViewController.h; sourceTree = "<group>"; };
+		C035630E16F9D9F900AF80A1 /* STableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STableViewController.m; path = StaticTableViewBuilder/STableViewController.m; sourceTree = "<group>"; };
+		C0E89E8716FEEB9E004415B6 /* SSingleSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSingleSelectionViewController.h; path = StaticTableViewBuilder/SSingleSelectionViewController.h; sourceTree = "<group>"; };
+		C0E89E8816FEEB9E004415B6 /* SSingleSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSingleSelectionViewController.m; path = StaticTableViewBuilder/SSingleSelectionViewController.m; sourceTree = "<group>"; };
+		C0E89E8A16FF50B7004415B6 /* SReorderableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SReorderableViewController.h; path = StaticTableViewBuilder/SReorderableViewController.h; sourceTree = "<group>"; };
+		C0E89E8B16FF50B7004415B6 /* SReorderableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SReorderableViewController.m; path = StaticTableViewBuilder/SReorderableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C01C81BC16FAE6EB003E6B91 /* QuartzCore.framework in Frameworks */,
 				C03562F016F9D98E00AF80A1 /* UIKit.framework in Frameworks */,
 				C03562F216F9D98E00AF80A1 /* Foundation.framework in Frameworks */,
 				C03562F416F9D98E00AF80A1 /* CoreGraphics.framework in Frameworks */,
@@ -51,6 +66,7 @@
 		C03562E316F9D98E00AF80A1 = {
 			isa = PBXGroup;
 			children = (
+				C035630C16F9D9CC00AF80A1 /* StaticTableViewBuilder */,
 				C03562F516F9D98E00AF80A1 /* StaticTableView */,
 				C03562EE16F9D98E00AF80A1 /* Frameworks */,
 				C03562ED16F9D98E00AF80A1 /* Products */,
@@ -71,6 +87,7 @@
 				C03562EF16F9D98E00AF80A1 /* UIKit.framework */,
 				C03562F116F9D98E00AF80A1 /* Foundation.framework */,
 				C03562F316F9D98E00AF80A1 /* CoreGraphics.framework */,
+				C01C81BB16FAE6EB003E6B91 /* QuartzCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -78,6 +95,8 @@
 		C03562F516F9D98E00AF80A1 /* StaticTableView */ = {
 			isa = PBXGroup;
 			children = (
+				C01C81B816F9E8E8003E6B91 /* SettingsViewController.h */,
+				C01C81B916F9E8E8003E6B91 /* SettingsViewController.m */,
 				C03562FE16F9D98E00AF80A1 /* SAppDelegate.h */,
 				C03562FF16F9D98E00AF80A1 /* SAppDelegate.m */,
 				C03562F616F9D98E00AF80A1 /* Supporting Files */,
@@ -97,6 +116,19 @@
 				C035630516F9D98F00AF80A1 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C035630C16F9D9CC00AF80A1 /* StaticTableViewBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				C035630D16F9D9F900AF80A1 /* STableViewController.h */,
+				C035630E16F9D9F900AF80A1 /* STableViewController.m */,
+				C0E89E8716FEEB9E004415B6 /* SSingleSelectionViewController.h */,
+				C0E89E8816FEEB9E004415B6 /* SSingleSelectionViewController.m */,
+				C0E89E8A16FF50B7004415B6 /* SReorderableViewController.h */,
+				C0E89E8B16FF50B7004415B6 /* SReorderableViewController.m */,
+			);
+			name = StaticTableViewBuilder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +199,10 @@
 			files = (
 				C03562FC16F9D98E00AF80A1 /* main.m in Sources */,
 				C035630016F9D98E00AF80A1 /* SAppDelegate.m in Sources */,
+				C035630F16F9D9F900AF80A1 /* STableViewController.m in Sources */,
+				C01C81BA16F9E8E8003E6B91 /* SettingsViewController.m in Sources */,
+				C0E89E8916FEEB9E004415B6 /* SSingleSelectionViewController.m in Sources */,
+				C0E89E8C16FF50B7004415B6 /* SReorderableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +282,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StaticTableView/StaticTableView-Prefix.pch";
 				INFOPLIST_FILE = "StaticTableView/StaticTableView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -257,7 +295,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StaticTableView/StaticTableView-Prefix.pch";
 				INFOPLIST_FILE = "StaticTableView/StaticTableView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -281,6 +321,7 @@
 				C035630B16F9D98F00AF80A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

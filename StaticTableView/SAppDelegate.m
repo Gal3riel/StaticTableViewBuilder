@@ -7,6 +7,7 @@
 //
 
 #import "SAppDelegate.h"
+#import "SettingsViewController.h"
 
 @implementation SAppDelegate
 
@@ -14,6 +15,9 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    SettingsViewController *settingsVC = [[SettingsViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:settingsVC];
+    self.window.rootViewController = navigationVC;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
