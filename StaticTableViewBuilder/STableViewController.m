@@ -188,32 +188,48 @@ static char eventWrapperKey;
 + (UIView *)headerLabelWithText:(NSString *)text
 {
     UIView *headerLabelContainerView = [[UIView alloc] initWithFrame:CGRectZero];
-    UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 8.0f, 280.0f, 0.0f)];
+    UILabel *headerLabel = nil;
+    if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
+        headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0f, 12.0f, 290.0f, 0.0f)];
+        headerLabel.font = [UIFont systemFontOfSize:15.0];
+        headerLabel.textColor = [UIColor colorWithRed:109.0/255.0f green:109.0/255.0f blue:114.0/255.0f alpha:1.0f];
+    } else {
+        headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 8.0f, 280.0f, 0.0f)];
+        headerLabel.font = [UIFont boldSystemFontOfSize:17.0];
+        headerLabel.textColor = [UIColor colorWithRed:61.0f/255.0f green:77.0f/255.0f blue:99.0f/255.0f alpha:1.0f];
+        headerLabel.shadowColor = [UIColor colorWithWhite:1.0 alpha:0.65];
+        headerLabel.shadowOffset = CGSizeMake(0.0, 1.0);
+    }
+    headerLabel.text = text;
     headerLabel.backgroundColor = [UIColor clearColor];
-    headerLabel.font = [UIFont boldSystemFontOfSize:17.0];
-    headerLabel.textColor = [UIColor colorWithRed:61.0f/255.0f green:77.0f/255.0f blue:99.0f/255.0f alpha:1.0f];
-    headerLabel.shadowColor = [UIColor colorWithWhite:1.0 alpha:0.65];
-    headerLabel.shadowOffset = CGSizeMake(0.0, 1.0);
     headerLabel.textAlignment = NSTextAlignmentLeft;
     headerLabel.numberOfLines = 1;
     headerLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    headerLabel.text = text;
     [headerLabel sizeToFit];
     headerLabelContainerView.frame = CGRectInset(headerLabel.frame, -20, -8);
     [headerLabelContainerView addSubview:headerLabel];
+
     return headerLabelContainerView;
 }
 
 + (UIView *)footerLabelWithText:(NSString *)text
 {
     UIView *footerLabelContainerView = [[UIView alloc] initWithFrame:CGRectZero];
-    UILabel *footerLabel = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 10.0f, 280.0f, 0.0f)];
+    UILabel *footerLabel = nil;
+    if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
+        footerLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0f, 6.0f, 290.0f, 0.0f)];
+        footerLabel.font = [UIFont systemFontOfSize:14.0];
+        footerLabel.textColor = [UIColor colorWithRed:109.0/255.0f green:109.0/255.0f blue:114.0/255.0f alpha:1.0f];
+        footerLabel.textAlignment = NSTextAlignmentLeft;
+    } else {
+        footerLabel = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 10.0f, 280.0f, 0.0f)];
+        footerLabel.font = [UIFont systemFontOfSize:15.0];
+        footerLabel.textColor = [UIColor colorWithRed:61.0f/255.0f green:77.0f/255.0f blue:99.0f/255.0f alpha:1.0f];
+        footerLabel.shadowColor = [UIColor colorWithWhite:1.0 alpha:0.65];
+        footerLabel.shadowOffset = CGSizeMake(0.0, 1.0);
+        footerLabel.textAlignment = NSTextAlignmentCenter;
+    }
     footerLabel.backgroundColor = [UIColor clearColor];
-    footerLabel.font = [UIFont systemFontOfSize:15.0];
-    footerLabel.textColor = [UIColor colorWithRed:61.0f/255.0f green:77.0f/255.0f blue:99.0f/255.0f alpha:1.0f];
-    footerLabel.shadowColor = [UIColor colorWithWhite:1.0 alpha:0.65];
-    footerLabel.shadowOffset = CGSizeMake(0.0, 1.0);
-    footerLabel.textAlignment = NSTextAlignmentCenter;
     footerLabel.numberOfLines = 0;
     footerLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     footerLabel.text = text;

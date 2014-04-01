@@ -40,7 +40,7 @@
         [section addRow:^(SRow *row) {
             [row setConfigurationBlock:^(UITableViewCell *cell) {
                 cell.textLabel.text = @"Slider";
-                UISlider *slider = [[UISlider alloc] initWithFrame:CGRectMake(0, 0, 80, 0)];
+                UISlider *slider = [[UISlider alloc] initWithFrame:CGRectMake(0, 0, 80, 20)];
                 slider.minimumValue = 0; slider.maximumValue = 12;
                 [slider addEventHandler:^(id sender, UIEvent *event) {
                     UISlider *s = sender;
@@ -53,7 +53,7 @@
         [section addRow:^(SRow *row) {
             [row setConfigurationBlock:^(UITableViewCell *cell) {
                 cell.textLabel.text = @"Switch";
-                UISwitch *switcher = [[UISwitch alloc] initWithFrame:CGRectMake(0, 0, 80, 0)];
+                UISwitch *switcher = [[UISwitch alloc] initWithFrame:CGRectMake(0, 0, 80, 20)];
                 [switcher addEventHandler:^(id sender, UIEvent *event) {
                     UISwitch *s = sender;
                     cell.detailTextLabel.text = s.on? @"On" : @"Off";
@@ -99,10 +99,30 @@
         }];
         [section setFooterView:[UILabel footerLabelWithText:@"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, purus id iaculis consequat."]];        
     }];
+    
+    [self addSection:^(SSection *section) {
+        [section setHeaderView:[UILabel headerLabelWithText:@"More"]];
+        [section addRow:^(SRow *row) {
+            [row setConfigurationBlock:^(UITableViewCell *cell) {
+                cell.textLabel.text = @"More Cell";
+            }];
+        }];
+        [section addRow:^(SRow *row) {
+            [row setConfigurationBlock:^(UITableViewCell *cell) {
+                cell.textLabel.text = @"More Cell";
+            }];
+        }];
+        [section addRow:^(SRow *row) {
+            [row setConfigurationBlock:^(UITableViewCell *cell) {
+                cell.textLabel.text = @"More Cell";
+            }];
+        }];
+        [section setFooterView:[UILabel footerLabelWithText:@"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, purus id iaculis consequat."]];
+    }];
 
     [self setAppearenceConfigurationBlock:^(UITableViewCell *cell) {
-        cell.textLabel.textColor = [UIColor colorWithWhite:0.05 alpha:1.0];
-        cell.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1.0];
+//        cell.textLabel.textColor = [UIColor colorWithWhite:0.05 alpha:1.0];
+//        cell.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1.0];
     }];
 
 }
